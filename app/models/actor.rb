@@ -12,4 +12,12 @@ class Actor < ActiveRecord::Base
     binding.pry
   end
 
+  def character 
+    self.characaters.collect {|character| character.name}
+  end
+
+  def show
+    self.shows.collect {|show| show.name}
+  end
+
 end
