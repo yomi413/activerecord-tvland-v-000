@@ -11,15 +11,15 @@ class Actor < ActiveRecord::Base
     # self.characaters.collect {|character| character.name} - self.shows.collect {|show| show.name}
     # "#{self.characters} - #{self.shows}"
     # binding.pry
-    ("#{character} - #{show}").join
+    ("#{character} - #{show}")
   end
 
   def character
-    self.characters.collect {|character| character.name}
+    self.characters.collect {|character| character.name}.join
   end
 
   def show
-    self.shows.collect {|show| show.name}
+    self.shows.collect {|show| show.name}.join
   end
 
 end
