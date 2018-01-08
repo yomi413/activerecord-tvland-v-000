@@ -7,17 +7,17 @@ class Actor < ActiveRecord::Base
   end
 
   def list_roles
-    "#{character}" - "#{show}"
+    "#{character} - #{show}"
   end
 
   # Helper methods - #character and #show
 
   def character
-    self.characters.collect {|character| character.name}
+    self.characters.collect {|character| character.name}.join
   end
 
   def show
-    self.shows.collect {|show| show.name}
+    self.shows.collect {|show| show.name}.join
   end
 
 end
