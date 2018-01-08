@@ -15,7 +15,7 @@ class Actor < ActiveRecord::Base
   end
 
   def character
-    self.characaters.collect {|character| character.name}
+    self.characters.collect {|character| character.name}
   end
 
   def show
