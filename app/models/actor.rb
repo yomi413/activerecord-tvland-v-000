@@ -10,7 +10,7 @@ class Actor < ActiveRecord::Base
     "#{character} - #{show}"
   end
 
-  # Helper methods
+  # Helper methods - #character and #show
 
   def character
     self.characters.collect {|character| character.name}.join
