@@ -11,7 +11,7 @@ class Actor < ActiveRecord::Base
     # self.characaters.collect {|character| character.name} - self.shows.collect {|show| show.name}
     # "#{self.characters} - #{self.shows}"
     # binding.pry
-    ("#{character} - #{show}")
+    "#{character} - #{show}"
   end
 
   def character
